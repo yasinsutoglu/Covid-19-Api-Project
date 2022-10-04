@@ -46,6 +46,8 @@ App(folder)
 
 - Bootstrap / style classes etc.
 
+- Plotly.js library
+
 - JS / DOM Manipulation - Arrow Function - Events - Conditionals - Functions - ASYNC/Fetch API - Destructuring 
 ### At the end of the project, i will be able to;
 
