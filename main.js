@@ -3,11 +3,12 @@ const initDate = document.querySelector("#init")
 const finalDate = document.querySelector("#final")
 const graphs = document.querySelector("#graphs")
 const selectCountry = document.querySelector("#select")
-let diseaseData;
 
+//global variables
+let diseaseData;
 let url2;
 
-
+//Fetch Country Function to fill the ComboBox
 const fetchCountry = ()=> {
 
   const url = `https://restcountries.com/v3.1/all`;
@@ -21,18 +22,19 @@ const fetchCountry = ()=> {
   }).then((newData)=> renderCountry(newData)).catch((err)=> console.log(err))
 
 }
-fetchCountry()
 
+fetchCountry() //fetch country function call
+
+//Filling combobox with this function
 const renderCountry = (newData)=> {
   
   newData.forEach((country)=> {
     const {common} =country.name
     selectCountry.innerHTML += `<option value="${common}">${common}</option>`;
   })
-
-
 }
 
+// Combobox value change event
 selectCountry.addEventListener("change", (e)=> {
 
 url2 = `https://disease.sh/v3/covid-19/historical/${e.target.value}?lastdays=all`
@@ -40,7 +42,7 @@ console.log(url2)
 fetchDisease();
 })
 
-
+//fetching covid-19 informations from API
 const  fetchDisease = async()=> {
 
 try {
@@ -64,6 +66,7 @@ const renderData =(data)=> {
     diseaseData = data
 }
 
+// Submit button click event --> showing the pie charts according to fetched datas about the chosen country
 submitBtn.addEventListener("click", (e)=>{
     
     e.preventDefault()
@@ -175,6 +178,7 @@ submitBtn.addEventListener("click", (e)=>{
 
 })
 
+// Date conversion from input value format to fetched data format
 const dateConvert = function(date) {
         let newArr = []
         let arr = date.split("-")
@@ -194,6 +198,7 @@ const dateConvert = function(date) {
 
 }
 
+// Error Handling Function -> shows error message in html container class
 const renderErrorDisease = () => {
    
   setTimeout(()=> {
