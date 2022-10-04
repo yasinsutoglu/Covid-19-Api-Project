@@ -26,14 +26,14 @@ App(folder)
 |----img           
 |----solution
         |----index.html  
-        |----app.js  
+        |----main.js  
         |----style.css 
 ```
 
 <!-- --------------------------------------- -->
 ### Purpose of Project;
 
-👨‍💻 The main aim of this project is to improve my <b>HTML/CSS/JS/git commands (push, pull, commit, add etc.) skills and responsive design abilities</b>.
+👨‍💻 The main aim of this project is to improve my <b>HTML/CSS/Vanilla JS/git commands (push, pull, commit, add etc.) skills and responsive design abilities</b>.
 
 
 ## Objective
@@ -44,9 +44,9 @@ App(folder)
 
 - HTML / Semantic elements 
 
-- Bootstrap / Card Element and style classes etc.
+- Bootstrap / style classes etc.
 
-- JS / DOM Manipulation - Arrow Function - Events - Conditionals - Functions - Fetch API 
+- JS / DOM Manipulation - Arrow Function - Events - Conditionals - Functions - ASYNC/Fetch API - Destructuring 
 ### At the end of the project, i will be able to;
 
 - improve coding skills within HTML & CSS & JS

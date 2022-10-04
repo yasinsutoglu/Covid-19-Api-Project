@@ -27,11 +27,7 @@ const renderCountry = (newData)=> {
   
   newData.forEach((country)=> {
     const {common} =country.name
-   
-
-    selectCountry.innerHTML += `
-                              <option value="${common}">${common}</option>
-    `;
+    selectCountry.innerHTML += `<option value="${common}">${common}</option>`;
   })
 
 
@@ -39,11 +35,9 @@ const renderCountry = (newData)=> {
 
 selectCountry.addEventListener("change", (e)=> {
 
-  
 url2 = `https://disease.sh/v3/covid-19/historical/${e.target.value}?lastdays=all`
 console.log(url2)
 fetchDisease();
-
 })
 
 
@@ -51,15 +45,11 @@ const  fetchDisease = async()=> {
 
 try {
     const res = await fetch(url2)
+
     console.log(res)
-    if(!res.ok) {
-
-        
-        renderErrorDisease();
-
-      
-        throw new Error("something went wrong ")
-        
+    if(!res.ok) {        
+        renderErrorDisease();      
+        throw new Error("something went wrong ")        
     }
     const data = await res.json()
     renderData(data.timeline)
@@ -68,9 +58,6 @@ try {
 }
     
 }
-
-
-
 
 const renderData =(data)=> {
     console.log(data)
@@ -93,7 +80,7 @@ submitBtn.addEventListener("click", (e)=>{
     }
 
      const diffCases = cases[final] - cases[init];
-    console.log(cases[final])
+   
      const diffDeaths = deaths[final] - deaths[init];
 
      const diffRecovered = recovered[final] - recovered[init];
@@ -208,7 +195,6 @@ const dateConvert = function(date) {
 }
 
 const renderErrorDisease = () => {
-
    
   setTimeout(()=> {
     const p = document.createElement("p");
