@@ -14,7 +14,7 @@
 
 <hr>
 
-[📍click here to see page]()
+[📍click here to see page](https://yasinsutoglu.github.io/Covid-19-Api-Project/)
 
 <!-- ------------------------------------------------------ -->
 
